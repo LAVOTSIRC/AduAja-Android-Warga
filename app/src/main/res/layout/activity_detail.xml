@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1. ScrollView: Agar seluruh layar bisa di-scroll ke bawah kalau teksnya panjang -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"> <!-- Warna background abu-abu muda ala web -->
+
+    <!-- 2. LinearLayout: Menyusun gelas (teks) dari atas ke bawah (vertical) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- KOTAK STATUS -->
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STATUS TIKET"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:padding="8dp"/>
+
+        <!-- JUDUL TIKET / NOMOR TIKET -->
+        <TextView
+            android:id="@+id/ticketnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Tiket / Judul"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000"/>
+
+        <!-- KATEGORI -->
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori Laporan"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#666666"/>
+
+        <!-- GARIS PEMBATAS (Visual separator) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Laporan:"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- DESKRIPSI LENGKAP -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading deskripsi lengkap dari server..."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#333333"/>
+
+        <!-- FOTO LAPORAN       -->
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0" />
+
+    </LinearLayout>
+</ScrollView>

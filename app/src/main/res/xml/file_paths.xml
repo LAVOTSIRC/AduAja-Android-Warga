@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+<!--    Ini artinya kita menyiapkan folder 'Pictures' di memori Hp sebagai gudang-->
+    <external-files-path
+        name="my_images"
+        path="Pictures" />
+</paths>

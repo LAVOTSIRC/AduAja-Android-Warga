@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Laporan Baru"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+
+        <!-- 2. Dropdown Kategori (Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Kategori:"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 3. Patokan Lokasi (Location Hint) -->
+        <EditText
+            android:id="@+id/etLocationHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Patokan Lokasi (Misal: Depan Sekolah SMA 1)"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 4. Sensor GPS -->
+        <Button
+            android:id="@+id/btnGetLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Ambil Koordinat GPS Saat Ini"
+            android:backgroundTint="#10b981"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:id="@+id/tvCoordinateResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Koordinat belum didapatkan"
+            android:textColor="#ef4444"
+            android:textStyle="italic"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 5. Input Deskripsi -->
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsikan masalah secara detail..."
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:gravity="top|start"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 6. Sensor Kamera -->
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📸 Ambil Foto Bukti"
+            android:backgroundTint="#f59e0b"
+            android:layout_marginBottom="8dp"/>
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 7. Tombol Kirim -->
+        <Button
+            android:id="@+id/btnSubmitReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KIRIM LAPORAN"
+            android:backgroundTint="#0ea5e9"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

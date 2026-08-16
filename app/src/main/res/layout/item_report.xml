@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ini pembungkus paling luar (MaterialCardView), ibarat <div class="card shadow"> -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <!-- PEMBUNGKUS UTAMA (Menyusun Ikon di kiri, Teks di kanan) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"> <!-- Pertanyaan 1: horizontal atau vertical? -->
+
+        <!-- IKON DI SEBELAH KIRI -->
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_launcher" /> <!-- Gambar sementara -->
+
+        <!-- PEMBUNGKUS TEKS DI SEBELAH KANAN (Menyusun Judul, Kategori, Tanggal ke bawah) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"> <!-- Pertanyaan 2: horizontal atau vertical? -->
+
+            <!-- JUDUL LAPORAN -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Judul Laporan Dummy" />
+
+            <!-- KATEGORI LAPORAN -->
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Kategori Dummy" />
+
+            <!-- TANGGAL LAPORAN -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="27 Jun 2026" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
